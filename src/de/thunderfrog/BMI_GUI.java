@@ -108,7 +108,6 @@ public class BMI_GUI implements ActionListener {
 
         btnCalculate.addActionListener(this);
 
-
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
@@ -123,12 +122,9 @@ public class BMI_GUI implements ActionListener {
 
             //  Körpergröße in Meter
             score = score / 10000;
-
             bmi = Double.parseDouble(txtWeight.getText()) / score;
 
             lbBMIScore.setText("Dein Score: " + new DecimalFormat("#.##").format(bmi));
-
-
 
             //  Alter in int für bessere Verarbeitung
             int age = Integer.parseInt(txtAge.getText());
@@ -184,8 +180,6 @@ public class BMI_GUI implements ActionListener {
                     lbBMIMid.setForeground(Color.BLACK);
                 }
             }
-
-
         }
     }
 }
